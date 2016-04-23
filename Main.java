@@ -60,10 +60,10 @@ public class Main {
                 Date date= new Date();
                 long time = date.getTime();
                 Timestamp ts = new Timestamp(time);
-                String buffer = (""+ts).substring(0,(""+ts).indexOf('.'));
+                String buffer = (""+ts).substring(0,(""+ts).indexOf('.')); // credits to siordache94 for this line of code
 
     
-                /* Count size of the Arraylist*/
+                /* Count size of the Arraylist */
                 int countSize = 0;
                 for (Object x: history){
                     countSize++;
