@@ -61,14 +61,26 @@ public class Main {
                 long time = date.getTime();
                 Timestamp ts = new Timestamp(time);
                 String buffer = (""+ts).substring(0,(""+ts).indexOf('.')); // credits to siordache94 for this line of code
+                
+                /* Print Arraylist elements */
+                if(history.size() < 5){
+                    for (Object x: history){
+                        System.out.println(buffer + "\t" + x);
+                    }
+                }else{
+                    for(int i = 0 ; i < 5 ; i++){
+                        System.out.println(buffer + "\t" + history.get(history.size()-(1+i)));
+                    }
+                }
+                
 
-    
-                /* Count size of the Arraylist */
+                /********* This is another method for printing the Arraylist elements
+                // Count size of arraylist
                 int countSize = 0;
                 for (Object x: history){
                     countSize++;
                 }
-                /* Print desired elements */
+                // Print desried elements
                 if (history.size() < 5){
                     for(int i = history.size()-1; i > history.size() - (countSize + 1); i--){
                         System.out.println(buffer + "\t" + history.get(i));
@@ -77,7 +89,7 @@ public class Main {
                     for(int i = history.size()-1; i > history.size() - 6; i--){
                     System.out.println(buffer + "\t" + history.get(i));
                   }  
-                }                
+                }**********/                
                 break;
                 
             case 5: /* Exit system */
